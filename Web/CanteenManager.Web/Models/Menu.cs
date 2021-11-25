@@ -1,4 +1,6 @@
-﻿namespace CanteenManager.Core
+﻿using CanteenManager.Web.Models;
+
+namespace CanteenManager.Core
 {
     public class Menu
     {
