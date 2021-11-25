@@ -1,13 +1,8 @@
-﻿@model IEnumerable<CanteenManager.Core.Category>
+﻿@model IEnumerable<Category>
 
 @{
     ViewData["Title"] = "Index";
 }
-
-
-
-
-
 
 <div class="card p-4 shadow border-radius-20px">
     <h1 class="fw-bold">Categories</h1>
@@ -27,6 +22,7 @@
                 <div>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn text-primary"><i class="fas fa-pen"></i></a>
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn text-danger"><i class="fas fa-times"></i></a>
+                    <a asp-action="Create" asp-controller="FoodItems" asp-route-categoryId="@item.Id" class="btn text-dark"><i class="fas fa-plus"></i></a>
                 </div>
 
             </div>
