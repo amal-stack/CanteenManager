@@ -1,4 +1,4 @@
-﻿using CanteenManager.Core;
+﻿using CanteenManager.Web.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +19,7 @@ namespace CanteenManager.Web.Data
 
         public DbSet<Slot> Slots { get; set; }
 
-        public DbSet<CanteenManager.Core.Category> Category { get; set; }
+        public DbSet<Category> Category { get; set; }
 
     }
 }

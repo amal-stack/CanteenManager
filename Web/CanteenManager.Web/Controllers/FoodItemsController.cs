@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CanteenManager.Core;
 using CanteenManager.Web.Data;
+using CanteenManager.Web.ViewModels;
 
 namespace CanteenManager.Web.Models
 {
@@ -22,7 +22,32 @@ namespace CanteenManager.Web.Models
         // GET: FoodItems
         public async Task<IActionResult> Index()
         {
-            return View(await _context.FoodItems.ToListAsync());
+            return View(await _context
+                .FoodItems
+                .Select(f => new FoodItemsListModel
+            { 
+              Id =  f.Id, 
+              Name = f.Name, 
+              Price = f.Price, 
+              Description =  f.Description, 
+              CategoryId =  f.CategoryId,
+              CategoryName = f.Category.Name
+            }).ToListAsync());
+        }
+
+        public async Task<IActionResult> Image(int? id)
+        {
+            if (id is null)
+            {
+                return NotFound();
+            }
+
+            return File(await (from f in _context.FoodItems
+                               where f.Id == id
+                               select f.Image
+                              ).FirstOrDefaultAsync(),
+                              "image/jpeg"
+                            );
         }
 
         // GET: FoodItems/Details/5
@@ -44,25 +69,51 @@ namespace CanteenManager.Web.Models
         }
 
         // GET: FoodItems/Create
-        public IActionResult Create()
+        public IActionResult Create(int? categoryId)
         {
-            return View();
+            if (categoryId is null)
+            {
+                return NotFound();
+            }
+
+            return View(new CreateFoodItemModel { CategoryId = categoryId.Value });
         }
 
         // POST: FoodItems/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,Image")] FoodItem foodItem)
+        public async Task<IActionResult> Create(ViewModels.CreateFoodItemModel model)
         {
+            byte[] imageContent = null;
+            if (model.Image is not null)
+            {
+                using var memoryStream = new MemoryStream();
+                model.Image.CopyTo(memoryStream);
+                if (memoryStream.Length > 2 * 1024 * 1024)
+                {
+                    ModelState.AddModelError(nameof(model.Image), "Image must be lower than 2 MiB");
+                }
+                else
+                {
+                    imageContent = memoryStream.ToArray();
+                }
+            }
+
             if (ModelState.IsValid)
             {
-                _context.Add(foodItem);
+                FoodItem food = new()
+                {
+                    CategoryId = model.CategoryId,
+                    Name = model.Name,
+                    Description = model.Description,
+                    Price = model.Price,
+                    Image = imageContent,
+                };
+                _context.Add(food);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(foodItem);
+            return View(model);
         }
 
         // GET: FoodItems/Edit/5

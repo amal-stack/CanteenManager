@@ -1,9 +1,30 @@
-﻿@model IEnumerable<CanteenManager.Core.FoodItem>
+﻿@model IEnumerable<CanteenManager.Web.ViewModels.FoodItemsListModel>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="card p-4 shadow border-radius-20px">
+    <h1 class="fw-bold">Food Items</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-outline-dark my-2">Create New</a>
+    </p>
+
+    <div class="row row-cols row-cols-1 row-cols-md-3">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card">
+                    <img src="@Url.Action("Image", new { id = item.Id })" class="card-img-top" alt="Item Image">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <h6 class="card-subtitle fw-bold mb-2 text-muted">@Html.DisplayFor(modelItem => item.CategoryName)</h6>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
 

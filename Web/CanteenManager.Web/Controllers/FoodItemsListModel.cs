@@ -1,0 +1,4 @@
+﻿namespace CanteenManager.Web.Models
+{
+
+}
