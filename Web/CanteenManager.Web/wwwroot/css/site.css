@@ -1,0 +1,282 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.border-radius-20px {
+    border-radius: 20px;
+}
+
+.bg-blue-transparent {
+    background-color: rgb(100, 150, 255, 0.2);
+}
+
+.bg-white-transparent {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.bg-black-transparent {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.san-city-red-gradient {
+    background: #ED213A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.citrus-peel-gradient {
+    background: #FDC830;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.citrus-peel-gradient-txt {
+    background: #FDC830;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.learning-and-leading-gradient {
+    background: #F7971E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sherbert-gradient {
+    background: #f79d00;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64f38c, #f79d00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64f38c, #f79d00);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.lush-gradient {
+    background: #56ab2f;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.quepal-gradient {
+    background: #11998e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+.blue-skies-gradient {
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.intuitive-purple-gradient {
+    background: #DA22FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9733EE, #DA22FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.deep-sea-space-gradient {
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.lawrencium-gradient {
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.very-blue-gradient {
+    background: #0575E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.friday-gradient {
+    background: #83a4d4;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.stripe-gradient {
+    background: #1FA2FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.azure-lane-gradient {
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.teal-love-gradient {
+    background: #AAFFA9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #11FFBD, #AAFFA9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dirty-frog-gradient {
+    background: #B993D6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wg-warm-flame-001-gradient {
+    background: #B993D6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #8CA6DB, #B993D6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    ;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wg-october-silence-085-gradient {
+    background: #21d4fd;
+    background: -webkit-linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+}
+
+.wg-amour-amour-097-gradient {
+    background: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+.wg-sweet-dessert-174-gradient {
+    background: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
+}
+
+.wg-landing-aircraft-155-gradient {
+    background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.wg-zeus-miracle-036-gradient {
+    background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+.wg-juicy-peach-004-gradient {
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.wg-elegance-111-gradient {
+    background: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+    background-blend-mode: screen;
+}
+
+.wg-february-ink-051-gradient {
+    background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+
+.wg-risky-concrete-098-gradient {
+    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+}
+
+
+.wg-party-bliss-106-gradient {
+    background: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.wg-premium-dark-076-gradient {
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    ;
+}
+
+.wg-dusty-grass-011-gradient {
+    background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.wg-star-wine-038-gradient {
+    background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+.wg-plum-bath-128-gradient {
+    background: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+}
+
+.wg-night-call-168-gradient {
+    background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+}
+
+.wg-millenium-pine-138-gradient {
+    background: linear-gradient(to top, #50cc7f 0%, #f5d100 100%);
+}
+
+.wg-high-flight-139-gradient {
+    background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+}
+
+.blazor-default-gradient {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+

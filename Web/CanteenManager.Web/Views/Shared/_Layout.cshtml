@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CanteenManager.Web</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CanteenManager.Web.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            font-family: Poppins, serif;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom mb-4">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-lg-0 d-lg-flex justify-content-center flex-fill">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark " title="Home" data-toggle="tooltip" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" title="Programs" data-toggle="tooltip" href="#">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" title="Exams" data-toggle="tooltip" href="#">Exams</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown my-2 px-lg-4 my-lg-0">
+                <a href="#dropDownUser" class=" link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
+                   data-toggle="dropdown" aria-expanded="false">
+                    <img src="svg/user-icon-48.svg" alt="avatar" width="32" height="32" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu shadow dropdown-menu-left dropdown-menu-lg-right" aria-labelledby="dropdownUser" style="width: 200px;">
+                    <div class="px-4 py-1">
+                        <h6 class="m-0"></h6>
+                        <small class="text-muted"></small>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - CanteenManager.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/0d89e4d16e.js" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
