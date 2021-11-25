@@ -1,4 +1,4 @@
-﻿namespace CanteenManager.Core
+﻿namespace CanteenManager.Web.Models
 {
     public enum OrderStatus
     {
