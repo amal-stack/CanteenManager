@@ -3,6 +3,7 @@ using System;
 using CanteenManager.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CanteenManager.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211125163406_AddCartItems")]
+    partial class AddCartItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +37,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.CartItem", b =>
@@ -61,7 +63,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasIndex("FoodItemId");
 
-                    b.ToTable("CartItems", (string)null);
+                    b.ToTable("CartItems");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.Category", b =>
@@ -80,7 +82,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.FoodItem", b =>
@@ -115,7 +117,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("FoodItems", (string)null);
+                    b.ToTable("FoodItems");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.Order", b =>
@@ -139,7 +141,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasIndex("SlotId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.OrderItem", b =>
@@ -170,7 +172,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.Slot", b =>
@@ -192,7 +194,7 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Slots", (string)null);
+                    b.ToTable("Slots");
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.Users.User", b =>
@@ -418,6 +420,8 @@ namespace CanteenManager.Web.Migrations
 
                     b.HasIndex("CartId")
                         .IsUnique();
+
+                    b.HasDiscriminator().HasValue(2);
                 });
 
             modelBuilder.Entity("CanteenManager.Web.Models.Users.Manager", b =>
