@@ -5,7 +5,7 @@
 }
 
 <div class="card p-4 shadow border-radius-20px">
-    <h1 class="fw-bold">Food Items</h1>
+    <h1 class="fw-bold text-danger">Food Items</h1>
     <p>
         <a asp-action="Create" class="btn btn-outline-dark my-2">Create New</a>
     </p>
@@ -14,12 +14,17 @@
         @foreach (var item in Model)
         {
             <div class="col">
-                <div class="card">
-                    <img src="@Url.Action("Image", new { id = item.Id })" class="card-img-top" alt="Item Image">
+                <div class="card h-100 my-2 border-radius-20px border">
+                    <img src="@Url.Action("Image", new { id = item.Id })" class="p-3 card-img-top border-radius-20px" height="250" alt="Item Image">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.Name)</h5>
-                        <h6 class="card-subtitle fw-bold mb-2 text-muted">@Html.DisplayFor(modelItem => item.CategoryName)</h6>
+                        <h3 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.Name)</h3>
+                        <h5 class="card-subtitle fw-bold mb-2 text-muted">@Html.DisplayFor(modelItem => item.CategoryName)</h5>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+
+                        <div class="align-text-bottom">
+                            <a asp-controller="" asp-area="@Context.GetEndpoint().ToString()" class="btn btn-dark rounded-pill mx-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                            <a asp-controller="" asp-area="" class="btn btn-outline-dark rounded-pill mx-2">Edit</a>
+                        </div>
                     </div>
                 </div>
             </div>
