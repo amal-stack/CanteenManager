@@ -27,31 +27,15 @@
                         <a class="nav-link text-dark " title="Home" data-toggle="tooltip" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" title="Programs" data-toggle="tooltip" href="#">Programs</a>
+                        <a class="nav-link text-dark" asp-controller="Categories" asp-action="Index" title="Programs" data-toggle="tooltip">Food</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" title="Exams" data-toggle="tooltip" href="#">Exams</a>
+                        <a class="nav-link text-dark" title="Exams" data-toggle="tooltip" href="#">Orders</a>
                     </li>
                 </ul>
             </div>
-            <div class="dropdown my-2 px-lg-4 my-lg-0">
-                <a href="#dropDownUser" class=" link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
-                   data-toggle="dropdown" aria-expanded="false">
-                    <img src="svg/user-icon-48.svg" alt="avatar" width="32" height="32" class="rounded-circle">
-                </a>
-                <div class="dropdown-menu shadow dropdown-menu-left dropdown-menu-lg-right" aria-labelledby="dropdownUser" style="width: 200px;">
-                    <div class="px-4 py-1">
-                        <h6 class="m-0"></h6>
-                        <small class="text-muted"></small>
-                    </div>
-                    <hr class="dropdown-divider">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <hr class="dropdown-divider">
-                    <a class="dropdown-item" href="#">Logout</a>
-                </div>
-            </div>
+            
+             <partial name="_LoginPartial" />
 
         </nav>
     </header>
